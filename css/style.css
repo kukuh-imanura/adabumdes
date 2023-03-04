@@ -10,8 +10,14 @@
     border: 0px;
 }
 
-#tombol #icon {
+#t-icon {
     color: white;
+}
+
+#icon {
+    color: white;
+    width: 32px;
+    height: 32px;
 }
 
 #menu ul {
@@ -27,8 +33,18 @@
     color: white;
 }
 
+#menu p {
+    margin: 0px;
+}
+
 #footer a {
     text-decoration: none;
 }
 
-
+@media only screen and (max-width: 575px) {
+    /* CSS untuk layar berukuran kecil */
+    #icon {
+      display: none;
+    }
+  }
+  
