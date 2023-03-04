@@ -6,9 +6,9 @@
                         $query = mysqli_query($conn, "SELECT * FROM peminjam");
                     ?>
 
-                    <table class="table mt-5">
+                    <table class="table mt-5 table-responsive" id="tabel">
                         <thead>
-                            <tr>
+                            <tr class="fw-bold">
                                 <td>NIK</td>
                                 <td>Nama</td>
                                 <td>Pekerjaan</td>

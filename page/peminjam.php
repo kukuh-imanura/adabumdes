@@ -86,9 +86,25 @@
             <h1 class="text-center mt-5">PEMINJAM</h1>
             <hr><br>
 
-            <!-- SEARCH -->
+            <div class="row mt-5">
+                <!-- CREATE DATA PEMINJAM -->
+                <div class="col-12 col-md-6">
+                    <button class="btn btn-primary ml-5 mt-2 justify-content-center" id="tombol">
+                        <i class="bi bi-person-plus-fill"></i>
+                        Tambah Data
+                    </button>
+                </div>
 
-            <!-- CREATE DATA PEMINJAM -->
+                <!-- SEARCH -->
+                <div class="col-12 col-md-6">
+                    <form class="form-inline float-right mr-5 mt-2" action="" method="post">
+                        <input class="col form-control" type="text" placeholder="Masukkan NIK/Nama">
+                        <button type="submit" class="btn btn-primary" id="tombol">
+                            <i class="bi bi-search"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
 
             <!-- READ DATA PEMINJAM -->
             <?php include("peminjam_read.php") ?>
