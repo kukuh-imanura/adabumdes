@@ -97,8 +97,8 @@
 
                 <!-- SEARCH -->
                 <div class="col-12 col-md-6">
-                    <form class="form-inline float-right mr-5 mt-2" action="" method="post">
-                        <input class="col form-control" type="text" placeholder="Masukkan NIK/Nama">
+                    <form class="form-inline float-right mr-5 mt-2" action="peminjam_search.php" method="get">
+                        <input class="col form-control" type="text" placeholder="Masukkan NIK/Nama" name="search">
                         <button type="submit" class="btn btn-primary" id="tombol">
                             <i class="bi bi-search"></i>
                         </button>
