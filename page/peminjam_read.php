@@ -21,8 +21,7 @@
                     <td>No Rekening</td>
                     <td>No Hutang</td>
                     <td>Nik Penjamin</td>
-                    <td>Edit</td>
-                    <td>Hapus</td>
+                    <td colspan="2">Action</td>
                 </tr>
             </thead>
 

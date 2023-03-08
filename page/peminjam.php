@@ -17,8 +17,9 @@
     <link rel="stylesheet" href="../bootstrap/bootstrap-5.3.0/css/bootstrap.min.css">
 
     <!-- CSS Online File -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
     <!-- For Icons Offline -->
     <link rel="stylesheet" href="../bootstrap/font/bootstrap-icons.css">
 
@@ -37,7 +38,8 @@
             <div class="container-fluid">
 
                 <!-- Toggle Collapse -->
-                <button id="tombol" type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <button id="tombol" type="button" class="navbar-toggler" data-bs-toggle="collapse"
+                    data-bs-target="#navbarCollapse">
                     <i class="bi bi-list text-white"></i>
                 </button>
 
@@ -97,7 +99,7 @@
 
                 <!-- SEARCH -->
                 <div class="col-12 col-md-6">
-                    <form class="form-inline float-right mr-5 mt-2" action="peminjam_search.php" method="get">
+                    <form class="form-inline float-right mr-5 mt-2" action="peminjam.php" method="get">
                         <input class="col form-control" type="text" placeholder="Masukkan NIK/Nama" name="search">
                         <button type="submit" class="btn btn-primary" id="tombol">
                             <i class="bi bi-search"></i>
@@ -106,9 +108,98 @@
                 </div>
             </div>
 
-            <!-- READ DATA PEMINJAM -->
-            <?php include("peminjam_read.php") ?>
-        
+            <div class="row">
+                <div class="col-12">
+                    <table class="table table-responsive mt-5" id="tabel">
+                        <?php
+
+                        include("../php/connect.php");
+
+                        if (isset($_GET['search'])) {
+
+                            $search = $_GET['search'];
+
+                            $query = mysqli_query($conn, "SELECT * FROM peminjam WHERE nikPeminjam LIKE '%$search%' OR nama LIKE '%$search%'");
+
+                            $row = mysqli_fetch_all($query, MYSQLI_ASSOC);
+
+                            if (empty($row)) {
+
+                                echo '<script>alert("Data ' . $search . ' yang anda cari tidak ditemukan");</script>';
+
+                            }
+
+                            ?>
+
+                            <thead>
+                                <tr class="fw-bold">
+                                    <td>NIK</td>
+                                    <td>Nama</td>
+                                    <td>Pekerjaan</td>
+                                    <td>Status</td>
+                                    <td>Alamat</td>
+                                    <td>No Rekening</td>
+                                    <td>No Hutang</td>
+                                    <td>Nik Penjamin</td>
+                                    <td colspan="2">Action</td>
+                                </tr>
+                            </thead>
+
+                            <?php
+
+                            foreach ($row as $data) {
+                                ?>
+
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <?php echo $data['nikPeminjam'] ?>
+                                        </td>
+                                        <td>
+                                            <?php echo $data['nama'] ?>
+                                        </td>
+                                        <td>
+                                            <?php echo $data['pekerjaan'] ?>
+                                        </td>
+                                        <td>
+                                            <?php echo $data['status'] ?>
+                                        </td>
+                                        <td>
+                                            <?php echo $data['alamat'] ?>
+                                        </td>
+                                        <td>
+                                            <?php echo $data['noRekening'] ?>
+                                        </td>
+                                        <td class="text-center">
+                                            <?php echo $data['noHutang'] ?>
+                                        </td>
+                                        <td>
+                                            <?php echo $data['nikPenjamin'] ?>
+                                        </td>
+                                        <td class="text-center">
+                                            <a href="peminnjam_u.php" class="bi bi-pencil-fill text-primary"></a>
+                                        </td>
+                                        <td class="text-center">
+                                            <a href="peminjam_d.php" class="bi bi-trash-fill text-danger"></a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+
+                                <?php
+                            }
+
+                        } else {
+
+                            // READ PEMINJAM
+                            include("peminjam_read.php");
+
+                        }
+
+                        ?>
+                    </table>
+                </div>
+            </div>
+
         </div>
     </div>
 
@@ -131,9 +222,12 @@
             </p>
         </div>
     </div>
-    
+
 </body>
 
 <script src="bootstrap/bootstrap-5.3.0/js/bootstrap.bundle.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+
 </html>
