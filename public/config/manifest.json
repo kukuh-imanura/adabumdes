@@ -1,0 +1,25 @@
+{
+  "name": "ADA Bumdes",
+  "short_name": "ADABumdes",
+  "description": "Untuk membantu dalam pengelolaan administrasi Bumdes",
+  "icons": [
+    {
+      "src": "../assets/icons/mushrooms144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    }
+  ],
+  "background_color": "#eeeeee",
+  "theme_color": "#111111",
+  "display": "standalone",
+  "start_url": "/",
+  "orientation": "portrait",
+  "screenshots": [
+    {
+      "src": "/assets/screenshots/window.png",
+      "type": "image/png",
+      "sizes": "1280x760",
+      "form_factor": "wide"
+    }
+  ]
+}
