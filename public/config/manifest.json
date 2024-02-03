@@ -1,7 +1,7 @@
 {
-  "name": "ADA Bumdes",
-  "short_name": "ADABumdes",
-  "description": "Untuk membantu dalam pengelolaan administrasi Bumdes",
+  "name": "Aplikasi Pengelolaan Dana Bumdes",
+  "short_name": "ADABUMDES",
+  "description": "Untuk membantu dalam pengelolaan administrasi dan dana Badan Usaha Milik Desa",
   "icons": [
     {
       "src": "../assets/icons/mushrooms144.png",
