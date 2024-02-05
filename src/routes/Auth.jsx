@@ -24,7 +24,7 @@ function Auth() {
         <Route path="/dashboard" element={<Dashboard/>}/>
       </Route>
 
-      <Route path='*' element={<NotFound/>} />
+      <Route path="*" element={<NotFound/>} />
     </Routes>
   )
 }
