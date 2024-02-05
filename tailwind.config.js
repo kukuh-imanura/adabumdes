@@ -13,7 +13,13 @@ module.exports = {
       'brand-primary': '#00ffff',
       'brand-secondary': '#ff0000',
     },
-    extend: {},
+    extend: {
+      height: {
+        '1/4-screen': '25vh',
+        '1/2-screen': '50vh',
+        '3/4-screen': '75vh',
+      },
+    },
   },
   plugins: [],
 }
