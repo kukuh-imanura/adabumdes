@@ -4,7 +4,7 @@ import { Route, Routes } from 'react-router'
 // PUBLIC
 import PublicRoutes from './PublicRoutes'
 import LandingPage from '../pages/LandingPage'
-import Notfound from '../pages/Notfound'
+import Notfound from '../Notfound'
 
 // PRIVATE
 import PrivateRoutes from './PrivateRoutes';
@@ -12,7 +12,7 @@ import Dashboard from '../pages/Dashboard'
 
 
 function Auth() {
-  const isLogin = true;
+  const isLogin = false;
   return (
     <Routes>
 
