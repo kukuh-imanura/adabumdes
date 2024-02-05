@@ -1,11 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import NotFound from './pages/NotFound';
+import { BrowserRouter } from 'react-router-dom';
+import Auth from './routes/Auth';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <NotFound />
+    <BrowserRouter>
+      <Auth/>
+    </BrowserRouter>
   </React.StrictMode>
 );
