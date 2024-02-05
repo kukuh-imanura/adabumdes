@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-function Notfound() {
+function NotFound() {
   const [darkmode, setDarkmode] = useState(false)
 
   useEffect(() => {
@@ -16,4 +16,4 @@ function Notfound() {
   );
 }
 
-export default Notfound;
+export default NotFound;
