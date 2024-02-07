@@ -1,0 +1,1 @@
+fontawesome 6.5.1
