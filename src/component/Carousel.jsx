@@ -1,5 +1,6 @@
 import React from 'react'
-import { ChevronLeft, ChevronRight } from 'react-bootstrap-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faEnvelope, faHome } from '@fortawesome/free-solid-svg-icons'
 
 function Carousel(props) {
   return (
@@ -14,10 +15,9 @@ function Carousel(props) {
       {/* BUTTON */}
       <div className='px-10 h-full flex justify-between'>
         <button>
-          <ChevronLeft size="32px" className='hover:accent-brand-primary'/>
+          <FontAwesomeIcon icon={faHome} className='text-brand-primary'/>
         </button>
         <button>
-          <ChevronRight size="32px"/>
         </button>
       </div>
 
