@@ -4,7 +4,7 @@
   "description": "Untuk membantu dalam pengelolaan administrasi dan dana Badan Usaha Milik Desa",
   "icons": [
     {
-      "src": "../assets/icons/mushrooms144.png",
+      "src": "../assets/images/icons/mushrooms144.png",
       "sizes": "144x144",
       "type": "image/png"
     }
@@ -16,13 +16,13 @@
   "orientation": "portrait",
   "screenshots": [
     {
-      "src": "../assets/screenshots/mushrooms320.png",
+      "src": "../assets/images/screenshots/mushrooms320.png",
       "type": "image/png",
       "sizes": "320x320",
       "form_factor": "wide"
     },
     {
-      "src": "../assets/screenshots/mushrooms320.png",
+      "src": "../assets/images/screenshots/mushrooms320.png",
       "type": "image/png",
       "sizes": "320x320"
     }

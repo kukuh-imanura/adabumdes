@@ -4,7 +4,7 @@ import { Route, Routes } from 'react-router'
 // PUBLIC
 import PublicRoutes from './PublicRoutes'
 import LandingPage from '../pages/LandingPage'
-import Notfound from '../Notfound'
+import Notfound from '../pages/Notfound'
 
 // PRIVATE
 import PrivateRoutes from './PrivateRoutes';
