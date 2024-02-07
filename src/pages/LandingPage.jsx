@@ -8,7 +8,7 @@ function LandingPage() {
     {
       img : "/assets/images/bg/gravityfalls.jpg",
       tittle : "Slide 1",
-      desc : "This is Slide 1"
+      desc : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero autem, consectetur eaque, deserunt accusamus nostrum nisi voluptate ea, ab alias reprehenderit adipisci ratione ut. Quibusdam tenetur laborum repudiandae tempore recusandae."
     },
     {
       img : "/assets/images/bg/night.jpg",

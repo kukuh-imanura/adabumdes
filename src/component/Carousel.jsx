@@ -24,9 +24,9 @@ function Carousel(props) {
 
       {/* CONTENT */}
       <img src={slide.img} alt='Background' className='h-full brightness-50 object-cover' />
-      <div className='absolute bottom-1/10 lg:bottom-1/5 left-1/10'>
-        <h1 className='text-light-primary drop-shadow'>{slide.tittle}</h1>
-        <p className='text-light-primary drop-shadow'>{slide.desc}</p>
+      <div className='absolute top-0 flex flex-col justify-center items-center w-full h-full px-1/10 text-center'>
+        <h1 className='text-light-primary drop-shadow w-1/2'>{slide.tittle}</h1>
+        <p className='text-light-primary drop-shadow w-3/4'>{slide.desc}</p>
       </div>
 
       {/* BUTTON */}
