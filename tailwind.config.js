@@ -15,9 +15,9 @@ module.exports = {
     },
     extend: {
       height: {
-        '1/4-screen': '25vh',
-        '1/2-screen': '50vh',
-        '3/4-screen': '75vh',
+        '25vh': '25vh',
+        '50vh': '50vh',
+        '75vh': '75vh',
       },
     },
   },
