@@ -30,7 +30,7 @@ function Carousel(props) {
 
         {/* CONTENT */}
         <div className="text-center w-1/2">
-          <h1 className="text-light-primary drop-shadow">{slide.tittle}</h1>
+          <h2 className="text-light-primary drop-shadow lg:text-h1">{slide.tittle}</h2>
           <p className="text-light-primary drop-shadow line-clamp-2">{slide.desc}</p>
           <button className="bg-brand-primary/50 hover:bg-brand-primary/40 px-3 py-2 mt-3 rounded-lg text-light-primary">Read More</button>
         </div>
