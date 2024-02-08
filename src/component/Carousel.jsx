@@ -11,13 +11,11 @@ function Carousel(props) {
 
   // Auto Slide
   useEffect(() => {
-    const intervalId = setInterval(() => {
-      setIndex((prevIndex) => (prevIndex + 1) % contentLength);
-    }, 3000);
+    const intervalId = setInterval(() => (setIndex(prevIndex => (prevIndex + 1) % contentLength)), 3000)
 
     // Membersihkan interval ketika komponen di-unmount
     return () => clearInterval(intervalId);
-  }, [index]);
+  }, [contentLength]);
 
   return (
     <div className={`${props.className} h-50vh lg:h-75vh relative`}>
@@ -26,7 +24,7 @@ function Carousel(props) {
       <img src={slide.img} alt='Background' className='h-full brightness-50 object-cover' />
       <div className='absolute top-0 flex flex-col justify-center items-center w-full h-full px-1/10 text-center'>
         <h1 className='text-light-primary drop-shadow w-1/2'>{slide.tittle}</h1>
-        <p className='text-light-primary drop-shadow w-3/4'>{slide.desc}</p>
+        <p className='text-light-primary drop-shadow w-3/4 line-clamp-2'>{slide.desc}</p>
       </div>
 
       {/* BUTTON */}
