@@ -23,9 +23,9 @@ function LandingPage() {
   ]
 
   return (
-    <>
+    <div className=''>
       <Carousel className="" content={carouselContent}/>
-    </>
+    </div>
   )
 }
 
