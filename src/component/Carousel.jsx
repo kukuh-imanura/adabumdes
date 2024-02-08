@@ -19,25 +19,25 @@ function Carousel(props) {
 
   return (
     <div className={`${props.className} h-50vh lg:h-75vh relative`}>
-      <Navbar className="bg-brand-primary/50 z-50" />
+      <Navbar className="w-full absolute top-0" />
 
-      <div className="h-full absolute top-0 -z-50">
+      <img src={slide.img} alt="Background" className="h-full w-full brightness-50 object-cover" />
+
+      <div className="h-full w-full absolute top-0 flex items-center justify-around">
+        <button onClick={() => setIndex((index - 1 + contentLength) % contentLength)}>
+          <i className="fa-solid fa-2xl fa-chevron-left text-light-primary/10 hover:text-light-primary"></i>
+        </button>
+
         {/* CONTENT */}
-        <img src={slide.img} alt="Background" className="h-full brightness-50 object-cover" />
-        <div className="absolute top-0 flex flex-col justify-center items-center w-full h-full px-1/10 text-center">
-          <h1 className="text-light-primary drop-shadow w-1/2">{slide.tittle}</h1>
-          <p className="text-light-primary drop-shadow w-3/4 line-clamp-2">{slide.desc}</p>
+        <div className="text-center w-1/2">
+          <h1 className="text-light-primary drop-shadow">{slide.tittle}</h1>
+          <p className="text-light-primary drop-shadow line-clamp-2">{slide.desc}</p>
+          <button className="bg-brand-primary/50 hover:bg-brand-primary/40 px-3 py-2 mt-3 rounded-lg text-light-primary">Read More</button>
         </div>
 
-        {/* BUTTON */}
-        <div className="px-10 h-full w-full absolute top-0 lg:flex lg:justify-between lg:block hidden">
-          <button onClick={() => setIndex((index - 1 + contentLength) % contentLength)}>
-            <i className="fa-solid fa-2xl fa-chevron-left text-light-primary/50 hover:text-light-primary"></i>
-          </button>
-          <button onClick={() => setIndex((index + 1) % contentLength)}>
-            <i className="fa-solid fa-2xl fa-chevron-right text-light-primary/50 hover:text-light-primary"></i>
-          </button>
-        </div>
+        <button onClick={() => setIndex((index + 1) % contentLength)}>
+          <i className="fa-solid fa-2xl fa-chevron-right text-light-primary/10 hover:text-light-primary"></i>
+        </button>
       </div>
     </div>
   );
