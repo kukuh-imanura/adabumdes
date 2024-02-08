@@ -6,7 +6,7 @@ function Navbar(props) {
       <h2 className='text-light-primary cursor-pointer lg:text-h1'>Logo</h2>
       <button className='flex items-center gap-2 group'>
         <p className='text-light-primary group-hover:text-brand-primary/50'>Login</p>
-        <i className="fa-solid fa-right-to-bracket text-light-primary  group-hover:text-brand-primary/50"></i>
+        <i className="fa-solid fa-right-to-bracket text-light-primary group-hover:text-brand-primary/50"></i>
       </button>
     </div>
   )
